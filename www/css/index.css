@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;/*vertical-align: baseline*/;background: transparent;list-style:none;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {border-collapse: collapse;border-spacing: 0;}
+a {text-decoration:none;}
+/* -------------------------------------------------------------------- */
+
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+	overflow-x:hidden;
+}
+
+/* Portrait layout (default) */
+.app {
+	width:100%;
+	height:100%;
+    position:absolute;             /* position in the center of the screen */
+    padding:20px 0;     /* image height is 200px (bottom 20px are overlapped with text) */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    /*.app { }*/
+}
+
+.logo{ width:121px; margin:auto; }
+
+h1 { font-size:17px; font-weight:normal; margin:20px 0; overflow:visible; padding:0px; text-align:center; }
+
+.event { width:200px; margin:25px auto; border-radius:4px; -webkit-border-radius:4px; color:#FFF; font-size:12px; padding:4px 0px; text-align:center; }
+.event.listening { background-color:#333333; display:block;}
+.event.received { background-color:#4B946A; display:none; }
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink { animation:fade 3000ms infinite; -webkit-animation:fade 3000ms infinite; }
+
+
+/* ------------------------------- */
+
+#info{
+	background:#fff;
+	border: 1px solid #808080;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding:4px 0px 2px 10px;
+	word-wrap:break-word;
+	min-height: 160px;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	width:295px;
+	margin:auto;
+}
+  
+#info > h4{
+	font-size:.95em;
+	margin:5px 0;
+}
+  
+.input_test{ width:170px; margin:20px auto; }
+
+input{
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align:center;
+	background:#fff;
+	color:#000;
+	font-size:1.1em;
+	text-decoration:none;
+	padding:10px;
+	width:170px;
+ }
+ 
+.btn{
+	border: 1px solid #555;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align:center;
+	background:#444;
+	width:150px;
+	color:#9ab;
+	font-size:1.1em;
+	text-decoration:none;
+	padding:1.2em 0;
+	width:250px;
+	margin:auto;
+}
+  
+.large{
+	width:250px;
+	padding:1.2em 0;
+}
